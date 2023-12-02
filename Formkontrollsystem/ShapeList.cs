@@ -1,10 +1,11 @@
 using System.Reflection.Metadata;
+using System.Runtime.InteropServices;
 
 namespace Formkontrollsystem;
 
 public class ShapeList
 {
-    private List<Shape> _shapes = new();
+    private readonly List<Shape> _shapes = new();
 
     public void AddShape(Shape shape)
     {
@@ -24,15 +25,26 @@ public class ShapeList
     {
         ShowAll(_shapes);
     }
-    
+
     public void ShowByArea()
     {
         ShowAll(_shapes.OrderBy(shape => shape.Area).ToList());
     }
-    
+
     public void ShowByColor()
     {
         ShowAll(_shapes.OrderBy(shape => shape.Color).ToList());
+    }
+
+    public void ShowFilterByColors(string color)
+    {
+        var filteredList = new List<Shape>();
+        foreach (var shape in _shapes)
+        {
+            if (string.Equals(shape.Color, color, StringComparison.CurrentCultureIgnoreCase))
+                filteredList.Add(shape);
+        }
+        ShowAll(filteredList);
     }
 
     public void ShowTotalArea()

@@ -10,5 +10,6 @@ shapes.AddShape(new Triangle("Triangle (instrument)", "green", 0.1, 0.1));
 
 //shapes.ShowByArea();
 //shapes.ShowByColor();
-shapes.ShowAll();
+shapes.ShowFilterByColors("red");
+//shapes.ShowAll();
 shapes.ShowTotalArea();

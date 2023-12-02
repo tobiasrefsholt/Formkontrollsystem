@@ -9,7 +9,7 @@ public class Circle : Shape
         _radius = radius;
     }
 
-    protected override double CalculateArea()
+    public override double CalculateArea()
     {
         return Math.PI * Math.Pow(_radius, 2);
     }

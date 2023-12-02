@@ -18,5 +18,5 @@ public abstract class Shape
         Console.WriteLine("Area: " + CalculateArea() + "m^2");
     }
 
-    protected abstract double CalculateArea();
+    public abstract double CalculateArea();
 }

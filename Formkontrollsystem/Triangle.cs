@@ -11,7 +11,7 @@ public class Triangle : Shape
         _height = height;
     }
 
-    protected override double CalculateArea()
+    public override double CalculateArea()
     {
         return _base * _height / 2;
     }

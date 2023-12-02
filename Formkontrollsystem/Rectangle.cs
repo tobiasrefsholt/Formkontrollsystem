@@ -11,7 +11,7 @@ public class Rectangle : Shape
         _width = width;
     }
 
-    protected override double CalculateArea()
+    public override double CalculateArea()
     {
         return _length * _width;
     }

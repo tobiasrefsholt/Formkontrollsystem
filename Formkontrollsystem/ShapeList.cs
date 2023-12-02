@@ -17,4 +17,20 @@ public class ShapeList
             Console.WriteLine(new string('-', 30));
         }
     }
+
+    public void ShowTotalArea()
+    {
+        Console.WriteLine("Total area of shapes: " + CalculateTotalArea() + " m^2");
+    }
+
+    private double CalculateTotalArea()
+    {
+        var totalArea = (double)0;
+        foreach (var shape in _shapes)
+        {
+            totalArea += shape.CalculateArea();
+        }
+
+        return totalArea;
+    }
 }

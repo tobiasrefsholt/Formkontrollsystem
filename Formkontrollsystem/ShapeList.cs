@@ -11,13 +11,28 @@ public class ShapeList
         _shapes.Add(shape);
     }
 
-    public void ShowAll()
+    public void ShowAll(List<Shape> shapes)
     {
-        foreach (var shape in _shapes)
+        foreach (var shape in shapes)
         {
             shape.Show();
             Console.WriteLine(new string('-', 30));
         }
+    }
+
+    public void ShowAll()
+    {
+        ShowAll(_shapes);
+    }
+    
+    public void ShowByArea()
+    {
+        ShowAll(_shapes.OrderBy(shape => shape.Area).ToList());
+    }
+    
+    public void ShowByColor()
+    {
+        ShowAll(_shapes.OrderBy(shape => shape.Color).ToList());
     }
 
     public void ShowTotalArea()
@@ -34,15 +49,5 @@ public class ShapeList
         }
 
         return totalArea;
-    }
-
-    public void SortByArea()
-    {
-        _shapes = _shapes.OrderBy(shape => shape.Area).ToList();
-    }
-    
-    public void SortByColor()
-    {
-        _shapes = _shapes.OrderBy(shape => shape.Color).ToList();
     }
 }

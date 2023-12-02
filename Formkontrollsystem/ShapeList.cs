@@ -1,8 +1,10 @@
+using System.Reflection.Metadata;
+
 namespace Formkontrollsystem;
 
 public class ShapeList
 {
-    private readonly List<Shape> _shapes = new();
+    private List<Shape> _shapes = new();
 
     public void AddShape(Shape shape)
     {
@@ -32,5 +34,15 @@ public class ShapeList
         }
 
         return totalArea;
+    }
+
+    public void SortByArea()
+    {
+        _shapes = _shapes.OrderBy(shape => shape.Area).ToList();
+    }
+    
+    public void SortByColor()
+    {
+        _shapes = _shapes.OrderBy(shape => shape.Color).ToList();
     }
 }

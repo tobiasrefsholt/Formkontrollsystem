@@ -2,19 +2,20 @@ namespace Formkontrollsystem;
 
 public abstract class Shape
 {
-    private readonly string _name;
-    private readonly string _color;
+    public string Name { get; }
+    public string Color { get; }
+    public double Area => CalculateArea();
 
     protected Shape(string name, string color)
     {
-        _name = name;
-        _color = color;
+        Name = name;
+        Color = color;
     }
 
     public void Show()
     {
-        Console.WriteLine("Name: " + _name);
-        Console.WriteLine("Color: " + _color);
+        Console.WriteLine("Name: " + Name);
+        Console.WriteLine("Color: " + Color);
         Console.WriteLine("Area: " + CalculateArea() + "m^2");
     }
 

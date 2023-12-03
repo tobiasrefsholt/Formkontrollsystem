@@ -1,6 +1,3 @@
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
-
 namespace Formkontrollsystem;
 
 public class ShapeList
@@ -50,6 +47,16 @@ public class ShapeList
     public void ShowTotalArea()
     {
         Console.WriteLine("Total area of shapes: " + CalculateTotalArea() + " m^2");
+    }
+
+    public void AddTestData()
+    {
+        AddShape(new Circle("Big", "red", 2654));
+        AddShape(new Circle("Small", "red", 12));
+        AddShape(new Rectangle("Some house", "yellow", 30.5, 23));
+        AddShape(new Rectangle("Really big house", "pink", 637.5, 9001.2));
+        AddShape(new Triangle("Christmas Tree", "green", 3, 12));
+        AddShape(new Triangle("Triangle (instrument)", "green", 0.1, 0.1));
     }
 
     private double CalculateTotalArea()

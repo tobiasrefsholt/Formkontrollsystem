@@ -9,6 +9,10 @@ public class AddCircle : Command
 
     public override void Run()
     {
-        throw new NotImplementedException();
+        ShowDescription();
+        var name = PromptUser.Ask("Name:");
+        var color = PromptUser.Ask("Color:");
+        var radius = PromptUser.AskForDouble("Radius:");
+        ShapeList.AddShape(new Circle(name, color, radius));
     }
 }

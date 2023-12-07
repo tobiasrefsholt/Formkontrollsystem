@@ -9,6 +9,11 @@ public class AddTriangle : Command
 
     public override void Run()
     {
-        throw new NotImplementedException();
+        ShowDescription();
+        var name = PromptUser.Ask("Name:");
+        var color = PromptUser.Ask("Color:");
+        var @base = PromptUser.AskForDouble("Base:");
+        var height = PromptUser.AskForDouble("Height:");
+        ShapeList.AddShape(new Triangle(name, color, @base, height));
     }
 }

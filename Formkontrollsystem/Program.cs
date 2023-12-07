@@ -9,7 +9,7 @@ while (true)
 {
     Console.Clear();
     commands.Show();
-    commands.Run(Console.ReadKey().Key);
-    Console.WriteLine("Press any key to continue...");
-    Console.ReadKey();
+    var key = PromptUser.AskForConsoleKey("Velg fra menyen: ");
+    commands.Run(key);
+    PromptUser.Continue();
 }

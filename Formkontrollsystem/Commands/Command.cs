@@ -1,3 +1,5 @@
+using Formkontrollsystem.Shapes;
+
 namespace Formkontrollsystem.Commands;
 
 public abstract class Command

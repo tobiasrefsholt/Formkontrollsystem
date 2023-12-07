@@ -1,4 +1,4 @@
-namespace Formkontrollsystem;
+namespace Formkontrollsystem.Shapes;
 
 public class Circle : Shape
 {

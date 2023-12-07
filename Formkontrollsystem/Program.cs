@@ -1,5 +1,6 @@
 ﻿using Formkontrollsystem;
 using Formkontrollsystem.Commands;
+using Formkontrollsystem.Shapes;
 
 var shapes = new ShapeList();
 var commands = new CommandSet(shapes);

@@ -4,7 +4,7 @@ public class ShowAllFilterByColor : Command
 {
     public ShowAllFilterByColor(ShapeList shapeList, ConsoleKey character) : base(shapeList, character)
     {
-        Description = "Show all and filter by color";
+        Description = "Filter by color";
     }
 
     public override void Run()

@@ -17,5 +17,11 @@ public abstract class Command
         Console.WriteLine($"({Character}) {Description}");
     }
 
+    protected void ShowDescription()
+    {
+        Console.Clear();
+        Console.WriteLine(Description);
+    }
+
     public abstract void Run();
 }

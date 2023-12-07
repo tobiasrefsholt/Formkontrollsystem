@@ -11,6 +11,7 @@ public class ShapeList
 
     public void ShowAll(List<Shape> shapes)
     {
+        Console.Clear();
         foreach (var shape in shapes)
         {
             shape.Show();
@@ -46,6 +47,7 @@ public class ShapeList
 
     public void ShowTotalArea()
     {
+        Console.Clear();
         Console.WriteLine("Total area of shapes: " + CalculateTotalArea() + " m^2");
     }
 

@@ -9,6 +9,7 @@ public class AddTestData : Command
 
     public override void Run()
     {
+        ShowDescription();
         ShapeList.AddTestData();
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.Design;
-using Formkontrollsystem;
+﻿using Formkontrollsystem;
 using Formkontrollsystem.Commands;
 
 var shapes = new ShapeList();
@@ -9,7 +8,7 @@ while (true)
 {
     Console.Clear();
     commands.Show();
-    var key = PromptUser.AskForConsoleKey("Velg fra menyen: ");
+    var key = PromptUser.AskForConsoleKey("Choose an option: ");
     commands.Run(key);
     PromptUser.Continue();
 }

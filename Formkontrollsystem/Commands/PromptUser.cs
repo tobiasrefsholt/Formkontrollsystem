@@ -15,7 +15,7 @@ public class PromptUser
         {
             var answer = Ask(question);
             if (answer != string.Empty || !isRequired) return answer;
-            Console.WriteLine("Dette feltet er påkrevd.");
+            Console.WriteLine("This field is required.");
         }
     }
 
@@ -25,7 +25,7 @@ public class PromptUser
         {
             var answer = AskForDoubleOrNull(question);
             if (answer != null) return (double)answer;
-            Console.WriteLine("Ugyldig input. Må være et tall.");
+            Console.WriteLine("Invalid input. Must be a number.");
         }
     }
 
@@ -36,7 +36,7 @@ public class PromptUser
             var answer = Ask(question);
             if (answer == string.Empty) return null;
             if (double.TryParse(answer, out var number)) return number;
-            Console.WriteLine("Ugyldig input. Må være et tall.");
+            Console.WriteLine("Invalid input. Must be a number.");
         }
     }
 

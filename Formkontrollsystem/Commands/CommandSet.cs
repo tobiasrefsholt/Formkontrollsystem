@@ -13,9 +13,9 @@ public class CommandSet
             new ShowAllSortByColor(shapeList, ConsoleKey.D3),
             new ShowAllFilterByColor(shapeList, ConsoleKey.D4),
             new ShowTotalArea(shapeList, ConsoleKey.D5),
-            new AddCar(shapeList, ConsoleKey.D6),
-            new AddPlane(shapeList, ConsoleKey.D7),
-            new AddBoat(shapeList, ConsoleKey.D8),
+            new AddTriangle(shapeList, ConsoleKey.D6),
+            new AddRectangle(shapeList, ConsoleKey.D7),
+            new AddCircle(shapeList, ConsoleKey.D8),
             new AddTestData(shapeList, ConsoleKey.D9)
         };
     }

@@ -14,7 +14,7 @@ public abstract class Command
 
     public void Show()
     {
-        Console.WriteLine($"({Character.ToString()}) {Description}");
+        Console.WriteLine($"({Character}) {Description}");
     }
 
     public abstract void Run();
